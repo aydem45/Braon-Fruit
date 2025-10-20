@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>Detail Produk - FreshMart</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-success" href="index.html">
+                <i class="fas fa-leaf me-2"></i>FreshMart
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontak</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Cari produk..." id="searchInput">
+                    </div>
+                    <a href="#" class="btn btn-outline-success me-2" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge bg-success" id="cartCount">0</span>
+                    </a>
+                    <a href="login.html" class="btn btn-success">
+                        <i class="fas fa-user me-1"></i>Masuk
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                            <li class="breadcrumb-item"><a href="products.html">Produk</a></li>
+                            <li class="breadcrumb-item active" id="productBreadcrumb">Detail Produk</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <!-- Product Images -->
+                    <div class="product-images">
+                        <div class="main-image mb-3">
+                            <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Product Image" class="img-fluid rounded-3 shadow" id="mainProductImage">
+                        </div>
+                        <div class="thumbnail-images d-flex gap-2">
+                            <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Thumbnail 1" class="img-thumbnail thumbnail-img active" style="width: 80px; height: 80px; object-fit: cover; cursor: pointer;">
+                            <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Thumbnail 2" class="img-thumbnail thumbnail-img" style="width: 80px; height: 80px; object-fit: cover; cursor: pointer;">
+                            <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Thumbnail 3" class="img-thumbnail thumbnail-img" style="width: 80px; height: 80px; object-fit: cover; cursor: pointer;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Product Info -->
+                    <div class="product-info">
+                        <h1 class="fw-bold mb-3" id="productTitle">Apel Fuji Premium</h1>
+                        <div class="rating mb-3">
+                            <span class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="text-muted ms-2">(24 ulasan)</span>
+                        </div>
+                        <div class="price mb-4">
+                            <span class="h3 text-success fw-bold" id="productPrice">Rp 35.000</span>
+                            <span class="text-muted text-decoration-line-through ms-2" id="originalPrice">Rp 45.000</span>
+                            <span class="badge bg-danger ms-2">22% OFF</span>
+                        </div>
+                        <p class="text-muted mb-4" id="productDescription">
+                            Apel Fuji premium langsung dari kebun terpilih. Rasa manis, tekstur renyah, 
+                            dan kandungan nutrisi tinggi. Cocok untuk camilan sehat keluarga atau jus segar.
+                        </p>
+                        
+                        <!-- Product Options -->
+                        <div class="product-options mb-4">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Berat:</label>
+                                <div class="btn-group" role="group">
+                                    <input type="radio" class="btn-check" name="weight" id="weight1kg" checked>
+                                    <label class="btn btn-outline-success" for="weight1kg">1 kg</label>
+                                    
+                                    <input type="radio" class="btn-check" name="weight" id="weight2kg">
+                                    <label class="btn btn-outline-success" for="weight2kg">2 kg</label>
+                                    
+                                    <input type="radio" class="btn-check" name="weight" id="weight5kg">
+                                    <label class="btn btn-outline-success" for="weight5kg">5 kg</label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Jumlah:</label>
+                                <div class="input-group" style="width: 150px;">
+                                    <button class="btn btn-outline-secondary" type="button" id="decreaseQty">-</button>
+                                    <input type="number" class="form-control text-center" value="1" min="1" id="quantity">
+                                    <button class="btn btn-outline-secondary" type="button" id="increaseQty">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="action-buttons mb-4">
+                            <button class="btn btn-success btn-lg me-3" id="addToCartBtn">
+                                <i class="fas fa-cart-plus me-2"></i>Tambah ke Keranjang
+                            </button>
+                            <button class="btn btn-outline-success btn-lg" id="buyNowBtn">
+                                <i class="fas fa-bolt me-2"></i>Beli Sekarang
+                            </button>
+                        </div>
+
+                        <!-- Product Features -->
+                        <div class="product-features">
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-truck text-success me-2"></i>
+                                        <small class="text-muted">Gratis ongkir min. Rp 100k</small>
+                                    </div>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <small class="text-muted">Garansi segar</small>
+                                    </div>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-clock text-success me-2"></i>
+                                        <small class="text-muted">Pengiriman same day</small>
+                                    </div>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-leaf text-success me-2"></i>
+                                        <small class="text-muted">100% organik</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Tabs -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <ul class="nav nav-tabs mb-4" id="productTabs">
+                <li class="nav-item">
+                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description">
+                        Deskripsi
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="nutrition-tab" data-bs-toggle="tab" data-bs-target="#nutrition">
+                        Informasi Gizi
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews">
+                        Ulasan (24)
+                    </button>
+                </li>
+            </ul>
+            
+            <div class="tab-content" id="productTabsContent">
+                <div class="tab-pane fade show active" id="description">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h5 class="fw-bold mb-3">Detail Produk</h5>
+                            <p class="text-muted mb-4">
+                                Apel Fuji premium yang kami tawarkan merupakan pilihan terbaik untuk keluarga Anda. 
+                                Dipetik langsung dari kebun organik terpilih, apel ini memiliki rasa manis alami 
+                                dengan tekstur yang renyah dan segar.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Bebas pestisida dan bahan kimia</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Kaya akan vitamin C dan serat</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Dipetik pada tingkat kematangan optimal</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Dikemas dengan standar food grade</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Tahan simpan hingga 2 minggu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nutrition">
+                    <h5 class="fw-bold mb-3">Informasi Gizi per 100g</h5>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">Kalori</td>
+                                    <td>52 kcal</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Karbohidrat</td>
+                                    <td>14g</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Serat</td>
+                                    <td>2.4g</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Vitamin C</td>
+                                    <td>4.6mg</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Kalium</td>
+                                    <td>107mg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="reviews">
+                    <div class="reviews-section">
+                        <div class="review-item border-bottom pb-3 mb-3">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h6 class="fw-bold mb-1">Sari Dewi</h6>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <small class="text-muted">2 hari lalu</small>
+                            </div>
+                            <p class="text-muted mb-0">
+                                Apelnya sangat segar dan manis! Pengiriman cepat dan packaging rapi. 
+                                Pasti akan order lagi.
+                            </p>
+                        </div>
+                        <div class="review-item border-bottom pb-3 mb-3">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h6 class="fw-bold mb-1">Budi Santoso</h6>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <small class="text-muted">1 minggu lalu</small>
+                            </div>
+                            <p class="text-muted mb-0">
+                                Kualitas bagus, harga sesuai. Anak-anak suka banget dengan apelnya.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="py-5">
+        <div class="container">
+            <h3 class="fw-bold mb-4">Produk Terkait</h3>
+            <div class="row" id="relatedProducts">
+                <!-- Related products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-leaf me-2 text-success"></i>FreshMart
+                    </h5>
+                    <p class="text-muted">
+                        Menyediakan buah dan sayur segar berkualitas tinggi untuk keluarga Indonesia.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h6 class="fw-bold mb-3">Menu</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-muted text-decoration-none">Beranda</a></li>
+                        <li><a href="about.html" class="text-muted text-decoration-none">Tentang</a></li>
+                        <li><a href="products.html" class="text-muted text-decoration-none">Produk</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="fw-bold mb-3">Kategori</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">Buah Segar</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Sayuran</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Buah Impor</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Paket Hemat</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="fw-bold mb-3">Kontak</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><i class="fas fa-phone me-2"></i>+62 21 1234 5678</li>
+                        <li><i class="fas fa-envelope me-2"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="93fafdf5fcd3f5e1f6e0fbfef2e1e7bdfaf7">[email&#160;protected]</a></li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0 text-muted">&copy; 2024 FreshMart. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

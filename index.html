@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Desain_Logo_Toko_Buah.png" type="image/png">
+    <title>PasarBraon - Pasar Buah dan Sayur Suweger</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="bootstrap-5.3.8-dist\bootstrap-5.3.8-dist\css\bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-success" href="index.html">
+                <i class="fas fa-leaf me-2"></i>PasarBraon
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontak</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Cari produk..." id="searchInput">
+                    </div>
+                    <a href="#" class="btn btn-outline-success me-2" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge bg-success" id="cartCount">0</span>
+                    </a>
+                    <a href="login.html" class="btn btn-success">
+                        <i class="fas fa-user me-1"></i>Masuk
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-dark mb-4">
+                        Buah & Sayur <span class="text-success">Segar</span> 
+                        Langsung ke Rumah Anda
+                    </h1>
+                    <p class="lead text-muted mb-4">
+                        Dapatkan buah dan sayuran segar berkualitas tinggi dengan harga terjangkau. 
+                        Dikirim langsung dari kebun ke meja makan Anda.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="products.html" class="btn btn-success btn-lg px-4">
+                            <i class="fas fa-shopping-bag me-2"></i>Belanja Sekarang
+                        </a>
+                        <a href="about.html" class="btn btn-outline-success btn-lg px-4">
+                            Pelajari Lebih Lanjut
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Fresh Fruits and Vegetables" class="img-fluid rounded-3 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card p-4">
+                        <i class="fas fa-truck text-success fs-1 mb-3"></i>
+                        <h4>Pengiriman Cepat</h4>
+                        <p class="text-muted">Pengiriman same day untuk wilayah Jakarta dan sekitarnya</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card p-4">
+                        <i class="fas fa-leaf text-success fs-1 mb-3"></i>
+                        <h4>100% Organik</h4>
+                        <p class="text-muted">Semua produk kami bebas pestisida dan bahan kimia berbahaya</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card p-4">
+                        <i class="fas fa-shield-alt text-success fs-1 mb-3"></i>
+                        <h4>Jaminan Kualitas</h4>
+                        <p class="text-muted">Garansi uang kembali jika tidak puas dengan kualitas produk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Produk Unggulan</h2>
+                <p class="text-muted">Pilihan terbaik buah dan sayur segar hari ini</p>
+            </div>
+            <div class="row" id="featuredProducts">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+            <div class="text-center mt-4">
+                <a href="products.html" class="btn btn-outline-success btn-lg">
+                    Lihat Semua Produk <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-success text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-3">Dapatkan Penawaran Terbaik!</h3>
+                    <p class="mb-0">Berlangganan newsletter kami untuk mendapatkan promo dan update produk terbaru.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Masukkan email Anda">
+                        <button class="btn btn-light text-success fw-bold" type="button">Berlangganan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-leaf me-2 text-success"></i>PasarBraon
+                    </h5>
+                    <p class="text-light">
+                        Menyediakan buah dan sayur segar berkualitas tinggi untuk keluarga Indonesia.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/rcca_dam15/" target="_blank" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/6285774561790" target="_blank" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h6 class="fw-bold mb-3">Menu</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-secondary text-decoration-none">Beranda</a></li>
+                        <li><a href="about.html" class="text-secondary text-decoration-none">Tentang</a></li>
+                        <li><a href="products.html" class="text-secondary text-decoration-none">Produk</a></li>
+                        <li><a href="contact.html" class="text-secondary text-decoration-none">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="fw-bold mb-3">Kategori</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Buah Segar</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Sayuran</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Buah Impor</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Paket Hemat</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="fw-bold mb-3">Kontak</h6>
+                    <ul class="list-unstyled text-secondary">
+                        <li><i class="fas fa-phone me-2"></i><a href="tel:+85774561790">+857 7456 1790</a></li>
+                        <li><i class="fas fa-envelope me-2"></i><a href="mailto:reccajonathan27@gmail.com" class="__cf_email__" data-cfemail="127b7c747d52746077617a7f7360663c7b76">reccajonathan27@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Kebraon, Karangpilang, Surabaya</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0 text-light">&copy; 2025 PasarBraon. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="bootstrap-5.3.8-dist\bootstrap-5.3.8-dist\js\bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
